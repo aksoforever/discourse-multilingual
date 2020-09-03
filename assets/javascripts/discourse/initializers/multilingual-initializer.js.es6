@@ -161,7 +161,7 @@ export default {
         return html;
       }, { priority: 100 });
       
-      if (!currentUser && siteSettings.multilingual_guest_language_switcher === "header") {
+      if (siteSettings.multilingual_guest_language_switcher === "header") {
         api.reopenWidget('header', {
           defaultState() {
             return jQuery.extend(this._super(...arguments), { languageSwitcherMenuVisible: false });
